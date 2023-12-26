@@ -1,4 +1,6 @@
-# I'm going to build a MERN CRM solution that have four modules that integrate to provide this  comprehensive CRM solution, the 4 modules are:
+# project instractions:
+
+I'm going to build a MERN CRM solution that have four modules that integrate to provide this  comprehensive CRM solution, the 4 modules are:
 
 1. Relationship Management
 2. Sales Automation

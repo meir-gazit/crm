@@ -145,5 +145,3 @@
 6. **Documentation:**
    - Generate API documentation using tools like Swagger.
    - Document the codebase for future maintenance.
-
-Remember to adapt the above steps based on your specific project requirements and preferences. This comprehensive approach should provide a solid foundation for developing a MERN CRM solution with the specified modules.

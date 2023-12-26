@@ -1,16 +1,15 @@
 # project instractions:
 
-I'm going to build a MERN CRM solution that have four modules that integrate to provide this  comprehensive CRM solution, the 4 modules are:
+This is a describtion of the development process, list each of the modules separately, from which module to start, which external libraries to use, message queuing, etc. I'll expand and detail for each of the parts in a clear way up to the level of the technical specification for development.
+
+4 modules that integrate to provide this  comprehensive CRM solution, the 4 modules are:
 
 1. Relationship Management
 2. Sales Automation
 3. Marketing Automation
 4. Customer Service
 
-# This is a describtion of the development process, list each of the modules separately, from which module to start, which external libraries to use, message queuing, etc. I'll expand and detail for each of the parts in a clear way up to the level of the technical specification for development.
-
-
-# Below is a detailed development process for each module:
+# detailed development process for each module:
 
 ### 1. Relationship Management:
 

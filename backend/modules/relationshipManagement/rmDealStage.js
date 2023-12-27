@@ -5,6 +5,9 @@ const dealStageSchema = new mongoose.Schema({
   description: { type: String },
   probabilityOfSuccess: { type: Number },
   durationInStage: { type: Number },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   // Other attributes as needed
 })
 

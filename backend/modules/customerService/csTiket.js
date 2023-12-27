@@ -7,8 +7,8 @@ const ticketSchema = new mongoose.Schema({
   priority: { type: String, enum: ['Low', 'Medium', 'High'], default: 'Medium' },
   assignee: { type: mongoose.Schema.Types.ObjectId, ref: 'csStaff' },
   customer: { type: mongoose.Schema.Types.ObjectId, ref: 'csCustomer' },
-  createdDate: { type: Date, default: Date.now },
-  updatedDate: { type: Date, default: Date.now },
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csTicket = mongoose.model('csTicket', ticketSchema)

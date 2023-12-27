@@ -4,6 +4,9 @@ const marketingAnalyticsDashboardSchema = new mongoose.Schema({
   kpis: [{ name: String, value: Number }],
   charts: { type: String },
   graphs: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   conversionMetrics: { type: String }
 })
 

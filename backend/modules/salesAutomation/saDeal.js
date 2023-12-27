@@ -6,6 +6,9 @@ const dealSchema = new mongoose.Schema({
   probability: { type: Number },
   closeDate: { type: Date },
   salesStage: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   // Other attributes as needed
 })
 

@@ -5,6 +5,9 @@ const emailTemplateSchema = new mongoose.Schema({
   subject: { type: String },
   content: { type: String },
   variables: [String],
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   senderInformation: { type: String }
 })
 

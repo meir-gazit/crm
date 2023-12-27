@@ -6,6 +6,8 @@ const customerSatisfactionSurveySchema = new mongoose.Schema({
   ratings: { type: Number },
   comments: { type: String },
   surveyDate: { type: Date, default: Date.now },
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csCustomerSatisfactionSurvey = mongoose.model('csCustomerSatisfactionSurvey', customerSatisfactionSurveySchema)

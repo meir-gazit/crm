@@ -6,6 +6,9 @@ const productSchema = new mongoose.Schema({
   price: { type: Number },
   description: { type: String },
   features: [String],
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   // Other attributes as needed
 })
 

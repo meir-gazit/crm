@@ -6,6 +6,9 @@ const taskSchema = new mongoose.Schema({
   priority: { type: String },
   status: { type: String },
   assignedTo: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   // Other attributes as needed
   associatedContact: { type: mongoose.Schema.Types.ObjectId, ref: 'Contact' },
   associatedCompany: { type: mongoose.Schema.Types.ObjectId, ref: 'Company' },

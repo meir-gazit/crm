@@ -5,6 +5,7 @@ const escalationSchema = new mongoose.Schema({
   escalationLevel: { type: String },
   reason: { type: String },
   timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csEscalation = mongoose.model('csEscalation', escalationSchema)

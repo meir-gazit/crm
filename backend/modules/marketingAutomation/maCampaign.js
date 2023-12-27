@@ -6,6 +6,9 @@ const campaignSchema = new mongoose.Schema({
   endDate: { type: Date },
   description: { type: String },
   budget: { type: Number },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   status: { type: String, enum: ['Planned', 'Active', 'Completed', 'Canceled'], default: 'Planned' }
 })
 

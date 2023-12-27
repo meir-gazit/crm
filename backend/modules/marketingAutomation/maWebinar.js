@@ -5,6 +5,9 @@ const webinarSchema = new mongoose.Schema({
   date: { type: Date },
   host: { type: String },
   registrationDetails: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   attendanceTracking: { type: Boolean, default: false }
 })
 

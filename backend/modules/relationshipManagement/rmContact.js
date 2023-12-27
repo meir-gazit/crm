@@ -6,6 +6,9 @@ const contactSchema = new mongoose.Schema({
   email: { type: String, required: true },
   phone: { type: String },
   address: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   // Other attributes as needed
 })
 

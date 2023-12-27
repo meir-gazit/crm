@@ -5,6 +5,7 @@ const conversationLogSchema = new mongoose.Schema({
   staffMember: { type: mongoose.Schema.Types.ObjectId, ref: 'csStaff' },
   logContent: { type: String },
   timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csConversationLog = mongoose.model('csConversationLog', conversationLogSchema)

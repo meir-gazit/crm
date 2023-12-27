@@ -6,6 +6,9 @@ const contactSchema = new mongoose.Schema({
   phone: { type: String },
   company: { type: String },
   position: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csContact = mongoose.model('csContact', contactSchema)

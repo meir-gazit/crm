@@ -6,6 +6,8 @@ const productReturnSchema = new mongoose.Schema({
   returnReason: { type: String },
   status: { type: String, enum: ['Requested', 'Approved', 'Rejected'], default: 'Requested' },
   resolution: { type: String },
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csProductReturn = mongoose.model('csProductReturn', productReturnSchema)

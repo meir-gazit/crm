@@ -5,6 +5,9 @@ const proposalSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now },
   associatedDeal: { type: mongoose.Schema.Types.ObjectId, ref: 'Deal' }, // Reference to associated Deal
   content: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   status: { type: String, enum: ['Draft', 'Sent', 'Accepted', 'Rejected'], default: 'Draft' }
 })
 

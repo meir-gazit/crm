@@ -5,6 +5,9 @@ const contentCalendarSchema = new mongoose.Schema({
   publicationDates: [{ date: Date, contentPiece: String }],
   channels: [{ name: String }],
   assignees: [{ name: String }],
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   status: { type: String }
 })
 

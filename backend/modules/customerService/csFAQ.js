@@ -5,8 +5,8 @@ const faqSchema = new mongoose.Schema({
   answer: { type: String },
   category: { type: String },
   tags: [String],
-  createdDate: { type: Date, default: Date.now },
-  updatedDate: { type: Date, default: Date.now },
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csFAQ = mongoose.model('csFAQ', faqSchema)

@@ -7,6 +7,8 @@ const serviceRequestSchema = new mongoose.Schema({
   assignedStaff: { type: mongoose.Schema.Types.ObjectId, ref: 'csStaff' },
   dueDate: { type: Date },
   description: { type: String },
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csServiceRequest = mongoose.model('csServiceRequest', serviceRequestSchema)

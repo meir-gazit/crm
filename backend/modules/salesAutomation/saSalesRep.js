@@ -5,6 +5,9 @@ const salesRepSchema = new mongoose.Schema({
   email: { type: String },
   phone: { type: String },
   role: { type: String },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   territory: { type: mongoose.Schema.Types.ObjectId, ref: 'SalesTerritory' }, // Reference to Sales Territory
   // Other attributes as needed
 })

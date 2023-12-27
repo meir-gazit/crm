@@ -5,6 +5,7 @@ const liveChatSchema = new mongoose.Schema({
   staffMember: { type: mongoose.Schema.Types.ObjectId, ref: 'csStaff' },
   chatContent: { type: String },
   timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
 })
 
 const csLiveChat = mongoose.model('csLiveChat', liveChatSchema)

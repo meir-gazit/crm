@@ -6,6 +6,9 @@ const salesQuotaSchema = new mongoose.Schema({
   targetRevenue: { type: Number },
   achievedRevenue: { type: Number },
   percentageAchieved: { type: Number },
+  
+  timestamp: { type: Date, default: Date.now },
+  isDeleted: { type: Boolean, defaul: false },
   // Other attributes as needed
 })
 

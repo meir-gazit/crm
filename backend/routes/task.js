@@ -1,39 +1,47 @@
-const express = require('express')
-const router = express.Router()
-const Task = require('../modules/Task')
-const asyncHandler = require('express-async-handler')
-const authMiddleware = require('../middleware/authMiddleware')
+import express from 'express'
+import expressPromiseRouter from 'express-promise-router'
+import Task from '../modules/Task.js'
+import asyncHandler from 'express-async-handler'
+import authMiddleware from '../middleware/authMiddleware.js'
 
-router.post('/', authMiddleware, asyncHandler(async (req, res, next) => {
-  const task = new Task({
-    title: req.body.title,
-    dueDate: req.body.dueDate,
-    priority: req.body.priority,
-    status: req.body.status,
-    assignedTo: req.body.assignedTo,
-    associatedContact: null,
-    associatedCompany: null,
-    associatedOpportunity: null,
-  })
+const router = expressPromiseRouter()
 
-  try {
-    const newTask = await task.save()
-    res.status(201).json(newTask)
-  } catch (err) {
-    next(error)
-  }
-}))
+router.post(
+	'/',
+	authMiddleware,
+	asyncHandler(async (req, res, next) => {
+		const task = new Task({
+			title: req.body.title,
+			dueDate: req.body.dueDate,
+			priority: req.body.priority,
+			status: req.body.status,
+			assignedTo: req.body.assignedTo,
+			associatedContact: null,
+			associatedCompany: null,
+			associatedOpportunity: null
+		})
+
+		try {
+			const newTask = await task.save()
+			res.status(201).json(newTask)
+		} catch (err) {
+			next(err)
+		}
+	})
+)
 
 // Route to get all tasks
-router.get('/', authMiddleware, asyncHandler(async (req, res, next) => {
-  try {
-    const tasks = await Task.find()
-    res.json(tasks)
-  } catch (err) {
-    next(error)
-  }
-}))
+router.get(
+	'/',
+	authMiddleware,
+	asyncHandler(async (req, res, next) => {
+		try {
+			const tasks = await Task.find()
+			res.json(tasks)
+		} catch (err) {
+			next(err)
+		}
+	})
+)
 
-
-
-module.exports = router
+export default router

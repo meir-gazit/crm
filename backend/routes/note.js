@@ -1,7 +1,8 @@
-const express = require('express')
-const Note = require('../modules/Note.js')
-const asyncHandler = require('express-async-handler')
-const authMiddleware = require('../middleware/authMiddleware')
+import express from 'express'
+import Note from '../modules/Note.js'
+import asyncHandler from 'express-async-handler'
+import authMiddleware from '../middleware/authMiddleware.js'
+
 const router = express.Router()
 
 router.post('/', authMiddleware, asyncHandler(async (req, res, next) => {
@@ -71,4 +72,4 @@ router.delete('/:id', authMiddleware, asyncHandler(async (req, res, next) => {
   }
 }))
 
-module.exports = router
+export default router

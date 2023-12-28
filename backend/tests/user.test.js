@@ -1,10 +1,15 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const app = require('../your/app'); // Import your Express app
+// Update the import statements to use ES modules syntax
+import chai from 'chai';
+import chaiHttp from 'chai-http';
+import app from '../your/app'; // Import your Express app
 
+// Use chai with chai-http
 chai.use(chaiHttp);
-const expect = chai.expect;
 
+// Destructure the 'expect' method from the chai module
+const { expect } = chai;
+
+// Define the tests using the 'describe' and 'it' functions
 describe('User API', () => {
   let userId; // Variable to store the ID of the created user for later use in other tests
 

@@ -1,12 +1,11 @@
-// routes/protectedRoute.js
-const express = require('express');
-const authMiddleware = require('../middleware/authMiddleware');
+import express from 'express'
+import authMiddleware from '../middleware/authMiddleware'
 
-const router = express.Router();
+const router = express.Router()
 
 // Protected route
 router.get('/protected', authMiddleware, (req, res) => {
-  res.json({ message: 'This is a protected route', userId: req.userId });
-});
+	res.json({ message: 'This is a protected route', userId: req.userId })
+})
 
-module.exports = router;
+export default router

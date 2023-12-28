@@ -1,5 +1,4 @@
-// Import the 'jsonwebtoken' library for working with JSON Web Tokens
-const jwt = require('jsonwebtoken')
+import jwt from 'jsonwebtoken'
 
 // Authentication Middleware function
 const authMiddleware = (req, res, next) => {
@@ -42,4 +41,4 @@ const authMiddleware = (req, res, next) => {
 }
 
 // Export the authentication middleware for use in other parts of the application
-module.exports = authMiddleware
+export default authMiddleware

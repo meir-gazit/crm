@@ -5,8 +5,7 @@
 	"type": "module",
 	"main": "server.js",
 	"scripts": {
-		"dev": "cls && nodemon server.js",
-		"test": "mocha --require @babel/register test/**/*.js"
+		"dev": "nodemon && server.js"
 	},
 	"babel": {
 		"presets": [
@@ -29,10 +28,6 @@
 		"@babel/preset-env": "^7.23.6",
 		"@babel/register": "^7.22.15",
 		"@faker-js/faker": "^8.3.1",
-		"chai": "^5.0.0",
-		"chai-http": "^4.4.0",
-		"mocha": "^10.2.0",
-		"nodemon": "^3.0.2",
-		"supertest": "^6.3.3"
+		"nodemon": "^3.0.2"
 	}
 }

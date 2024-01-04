@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Input Mode</title>
+</head>
+<body>
+
+    <label for="myInput">Input:</label>
+    <input type="text" id="myInput" value="xxx" disabled>
+    <button onclick="toggleInputMode()">Change Mode</button>
+
+    <script>
+        function toggleInputMode() {
+            var inputElement = document.getElementById("myInput");
+            inputElement.disabled = !inputElement.disabled;
+        }
+    </script>
+
+</body>
+</html>
